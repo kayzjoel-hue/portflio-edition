@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joel Kaizire — Hospitality Leader · Entrepreneur · Kaizrug</title>
+  <meta name="description" content="Joel Kaizire — Hospitality Operations Leader in Dubai. Founder of Royal Connect Africa. Kaizrug brand. Available for opportunities." />
+  <meta property="og:title" content="Joel Kaizire — Move Quiet. Build Loud." />
+  <meta property="og:description" content="Hospitality leader in Dubai. Founder of Royal Connect Africa. Building the Kaizrug empire." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=Sora:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       KAIZRUG PORTFOLIO — v1.0
+       Designer notes:
+       — Luxury editorial. Dark, gold-accented, confident.
+       — Dual identity: Hospitality pro + African entrepreneur
+       — Canva brand colors: use these as your palette in Canva work too
+    ============================================= */
+
+    :root {
+      /* ── KAIZRUG BRAND PALETTE ──
+         Copy these hex values into your Canva Brand Kit */
+      --black:        #07090f;   /* Background deep */
+      --navy:         #0b0e1a;   /* Card surface */
+      --navy-2:       #111525;   /* Elevated card */
+      --border:       #1c2038;   /* Subtle dividers */
+      --border-2:     #252a42;   /* Hover borders */
+      --gold:         #c9a84c;   /* Primary brand accent — use in Canva headers */
+      --gold-light:   #e8c97a;   /* Gold highlight */
+      --gold-dim:     #6a5520;   /* Gold muted */
+      --emerald:      #00c87a;   /* Success / live / Africa */
+      --emerald-dim:  #00442a;   /* Emerald muted */
+      --cream:        #ece8df;   /* Primary text */
+      --muted:        #7a85a8;   /* Secondary text */
+      --faint:        #3a4060;   /* Tertiary / borders */
+      --maroon:       #8b1a2f;   /* Power accent */
+      --amber:        #f5a623;   /* Warning / energy */
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-mono:    'DM Mono', monospace;
+      --font-body:    'Sora', sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* — GRAIN OVERLAY — */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    /* — AMBIENT GLOW — */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 500px;
+      background: radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─────────── LAYOUT ─────────── */
+    .page { position: relative; z-index: 1; max-width: 1060px; margin: 0 auto; padding: 0 24px 100px; }
+
+    /* ─────────── NAV ─────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(28,32,56,0.6);
+      backdrop-filter: blur(12px);
+      background: rgba(7,9,15,0.85);
+    }
+
+    .nav-brand {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 3px;
+      color: var(--gold);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .nav-cta:hover { background: rgba(201,168,76,0.18); }
+
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+    }
+
+    /* ─────────── HERO ─────────── */
+    .hero {
+      padding: 80px 0 60px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: start;
+      position: relative;
+    }
+
+    /* diagonal accent line */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 60px;
+      right: -24px;
+      width: 1px;
+      height: 280px;
+      background: linear-gradient(180deg, transparent, var(--gold-dim), transparent);
+    }
+
+    .hero-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-label::before {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      color: var(--gold);
+      display: block;
+    }
+
+    .hero-title {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--muted);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      margin-bottom: 28px;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    .hero-title strong { color: var(--cream); font-weight: 600; }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+
+    .badge {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 2px;
+    }
+
+    .badge.avail {
+      background: rgba(0,200,122,0.08);
+      border: 1px solid rgba(0,200,122,0.3);
+      color: var(--emerald);
+    }
+
+    .badge.visa {
+      background: rgba(245,166,35,0.08);
+      border: 1px solid rgba(245,166,35,0.25);
+      color: var(--amber);
+    }
+
+    .badge.dubai {
+      background: rgba(201,168,76,0.06);
+      border: 1px solid rgba(201,168,76,0.2);
+      color: var(--gold);
+    }
+
+    /* HERO PHOTO */
+    .hero-photo-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .hero-photo {
+      width: 200px;
+      height: 240px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid var(--border-2);
+      display: block;
+      background: var(--navy-2);
+      position: relative;
+    }
+
+    /* PLACEHOLDER FRAME — remove when real photo added */
+    .photo-placeholder {
+      width: 200px;
+      height: 240px;
+      border-radius: 6px;
+      background: var(--navy-2);
+      border: 1px dashed var(--gold-dim);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .photo-placeholder .ph-icon { font-size: 36px; opacity: 0.4; }
+    .photo-placeholder .ph-text {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      text-align: center;
+      padding: 0 12px;
+      line-height: 1.6;
+    }
+
+    /* gold corner accents on photo */
+    .hero-photo-wrap::before,
+    .hero-photo-wrap::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-color: var(--gold);
+      border-style: solid;
+    }
+    .hero-photo-wrap::before { top: -6px; left: -6px; border-width: 1px 0 0 1px; }
+    .hero-photo-wrap::after  { bottom: -6px; right: -6px; border-width: 0 1px 1px 0; }
+
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-photo-wrap { order: -1; }
+      .photo-placeholder { width: 120px; height: 140px; }
+    }
+
+    /* ─────────── CTA BUTTONS ─────────── */
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 48px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 3px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: rgba(0,200,122,0.1);
+      border: 1px solid rgba(0,200,122,0.35);
+      color: var(--emerald);
+    }
+    .btn-primary:hover { background: rgba(0,200,122,0.18); transform: translateY(-1px); }
+
+    .btn-gold {
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.35);
+      color: var(--gold);
+    }
+    .btn-gold:hover { background: rgba(201,168,76,0.18); transform: translateY(-1px); }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--border-2);
+      color: var(--muted);
+    }
+    .btn-ghost:hover { border-color: var(--gold-dim); color: var(--cream); transform: translateY(-1px); }
+
+    .btn-disabled {
+      background: transparent;
+      border: 1px dashed var(--faint);
+      color: var(--faint);
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    /* ─────────── SECTION STRUCTURE ─────────── */
+    .section { margin-bottom: 72px; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .section-header::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--cream);
+    }
+
+    /* ─────────── PHILOSOPHY ─────────── */
+    .philosophy {
+      border-left: 2px solid var(--gold);
+      padding: 20px 28px;
+      background: rgba(201,168,76,0.03);
+      border-radius: 0 4px 4px 0;
+      margin-bottom: 48px;
+    }
+
+    .philosophy blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(17px, 2.2vw, 22px);
+      font-style: italic;
+      color: var(--cream);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .philosophy cite {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+    }
+
+    /* ─────────── STATS ─────────── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .stat {
+      background: var(--navy);
+      padding: 20px 18px;
+      text-align: center;
+    }
+
+    .stat-val {
+      font-family: var(--font-display);
+      font-size: 30px;
+      font-weight: 900;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ─────────── STORY CARDS ─────────── */
+    .stories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .story-card {
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .story-card:hover { border-color: var(--gold-dim); transform: translateY(-2px); }
+
+    .story-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+    .story-title { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--cream); margin-bottom: 8px; }
+    .story-body { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .story-result { margin-top: 10px; font-size: 12px; color: var(--emerald); font-style: italic; }
+
+    /* ─────────── SKILLS ─────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .skill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      font-size: 12px;
+      color: var(--muted);
+      transition: border-color 0.2s;
+    }
+
+    .skill:hover { border-color: var(--border-2); color: var(--cream); }
+    .skill-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* ─────────── CERTS ─────────── */
+    .certs { display: flex; flex-direction: column; gap: 10px; }
+
+    .cert {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 14px 16px;
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+    }
+
+    .cert-icon { font-size: 18px; }
+    .cert-name { font-size: 13px; font-weight: 600; color: var(--cream); }
+    .cert-sub { font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-top: 2px; }
+    .cert-score { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--gold); }
+
+    /* ─────────── RCA SECTION ─────────── */
+    .rca-card {
+      background: var(--navy);
+      border: 1px solid rgba(0,200,122,0.2);
+      border-radius: 6px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rca-card::before {
+      content: 'RCA';
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-display);
+      font-size: 120px;
+      font-weight: 900;
+      color: rgba(0,200,122,0.03);
+      letter-spacing: -4px;
+      user-select: none;
+    }
+
+    .rca-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--emerald);
+      margin-bottom: 8px;
+    }
+
+    .rca-name {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 6px;
+    }
+
+    .rca-tagline {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .rca-pillars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .pillar {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      background: rgba(0,200,122,0.06);
+      border: 1px solid rgba(0,200,122,0.2);
+      border-radius: 2px;
+      color: rgba(0,200,122,0.7);
+    }
+
+    @media (max-width: 600px) { .rca-card { grid-template-columns: 1fr; } }
+
+    /* ─────────── BRAND PRODUCTS ─────────── */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .product-card {
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 18px;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+    }
+
+    .product-card:hover { border-color: var(--gold-dim); transform: translateY(-2px); }
+
+    .product-status {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-family: var(--font-mono);
+      font-size: 8px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 2px;
+    }
+
+    .product-status.live { background: rgba(0,200,122,0.1); color: var(--emerald); border: 1px solid rgba(0,200,122,0.2); }
+    .product-status.building { background: rgba(245,166,35,0.1); color: var(--amber); border: 1px solid rgba(245,166,35,0.2); }
+    .product-status.soon { background: rgba(201,168,76,0.08); color: var(--gold-dim); border: 1px solid rgba(201,168,76,0.15); }
+
+    .product-icon { font-size: 24px; margin-bottom: 10px; display: block; }
+    .product-name { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
+    .product-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+    /* ─────────── CONTACT SECTION ─────────── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .contact-card {
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 18px;
+    }
+
+    .contact-card h4 {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 12px;
+      transition: color 0.2s;
+    }
+
+    .contact-link:last-child { border-bottom: none; }
+    .contact-link:hover { color: var(--cream); }
+    .contact-link span { font-size: 15px; flex-shrink: 0; width: 22px; }
+    .contact-label { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--faint); display: block; margin-bottom: 1px; }
+
+    /* ─────────── PLACEHOLDER NOTICE ─────────── */
+    .placeholder-notice {
+      background: rgba(201,168,76,0.05);
+      border: 1px dashed var(--gold-dim);
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--gold-dim);
+      line-height: 1.8;
+    }
+
+    .placeholder-notice strong { color: var(--gold); display: block; margin-bottom: 6px; letter-spacing: 0.1em; }
+
+    /* ─────────── FOOTER ─────────── */
+    footer {
+      margin-top: 80px;
+      padding: 32px 0 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .footer-motto {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-top: 4px;
+    }
+
+    .footer-copy {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      color: var(--faint);
+      text-align: right;
+    }
+
+    /* ─────────── ANIMATIONS ─────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-label   { animation: fadeUp 0.5s ease both 0.1s; }
+    .hero-name    { animation: fadeUp 0.6s ease both 0.2s; }
+    .hero-title   { animation: fadeUp 0.6s ease both 0.35s; }
+    .hero-badges  { animation: fadeUp 0.6s ease both 0.45s; }
+    .cta-row      { animation: fadeUp 0.6s ease both 0.55s; }
+
+    /* ─────────── RESPONSIVE ─────────── */
+    @media (max-width: 540px) {
+      .hero { gap: 28px; }
+      .cta-row { gap: 8px; }
+      .btn { padding: 10px 14px; font-size: 9px; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+
+<body>
+<div class="page">
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-brand" href="#top">⚔ Kaizrug</a>
+    <ul class="nav-links">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#rca">RCA</a></li>
+      <li><a href="#brand">Brand</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="https://wa.me/971544392894" target="_blank" rel="noopener noreferrer">Hire Me</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="top">
+    <div>
+      <div class="hero-label">Hospitality Leader · Entrepreneur · Dubai, UAE</div>
+
+      <h1 class="hero-name">
+        Joel<br>
+        <em>Kaizire</em>
+      </h1>
+
+      <p class="hero-title">
+        <strong>Hospitality Operations & Guest Experience Specialist</strong> with 5+ years leading floors in Dubai. Founder of <strong>Royal Connect Africa</strong> — building the tourism and trade bridge between the UAE and East Africa.
+      </p>
+
+      <div class="hero-badges">
+        <span class="badge avail">● Immediate Joiner</span>
+        <span class="badge visa">Visa Sponsorship Required</span>
+        <span class="badge dubai">Dubai, UAE</span>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/971544392894" target="_blank" rel="noopener noreferrer">
+          📱 WhatsApp
+        </a>
+        <a class="btn btn-gold" href="https://www.linkedin.com/in/kaizire-joel-1b4100153" target="_blank" rel="noopener noreferrer">
+          🔗 LinkedIn
+        </a>
+        <!-- PLACEHOLDER: Replace [CLOUDFLARE_CV_URL] after Cloudflare deploy -->
+        <a class="btn btn-ghost" href="projects/projects.html" target="_blank" rel="noopener noreferrer">
+          📄 Full CV
+        </a>
+        <a class="btn btn-ghost" href="mailto:kaizrugwriter@gmail.com">
+          ✉ Email
+        </a>
+      </div>
+    </div>
+
+    <!-- PROFILE PHOTO — PLACEHOLDER -->
+    <!-- TO DEPLOY: Replace the div below with:
+         <img class="hero-photo" src="image/profile.jpg" alt="Joel Kaizire" />
+         Place profile.jpg in same folder as index.html -->
+    <div class="hero-photo-wrap">
+      <div class="photo-placeholder">
+
+        <img class="hero-photo" src="images/profile.jpg" alt="Joel Kaizire" />
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- ── PHILOSOPHY ── -->
+  <div class="philosophy">
+    <blockquote>
+      "The floor is a small world. Dubai taught me that hospitality is choreography — how a team moves like one instrument even when none share the same first language. My craft is finding harmony in that noise."
+    </blockquote>
+    <cite>— Joel Kaizire · Hospitality Professional · Dubai</cite>
+  </div>
+
+  <!-- ── PERFORMANCE ── -->
+  <section class="section" id="story">
+    <div class="section-header">
+      <span class="section-label">01</span>
+      <h2 class="section-title">Performance</h2>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-val">4.8</span>
+        <span class="stat-label">Guest Satisfaction / 5</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">+15%</span>
+        <span class="stat-label">Revenue via Upselling</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">10+</span>
+        <span class="stat-label">Staff Trained</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">97%</span>
+        <span class="stat-label">Waiter's Certification</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">300+</span>
+        <span class="stat-label">Daily Covers Led</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">5+</span>
+        <span class="stat-label">Years Dubai Hospitality</span>
+      </div>
+    </div>
+
+    <!-- STORIES -->
+    <div class="stories">
+      <div class="story-card">
+        <span class="story-icon">⭐</span>
+        <div class="story-title">A Friday Rush at Shvili</div>
+        <div class="story-body">Managed a full house with an unannounced VIP arrival. Reshuffled the floor and reassigned servers on the fly without breaking rhythm.</div>
+        <div class="story-result">"You run the place like it's yours." — Guest feedback</div>
+      </div>
+      <div class="story-card">
+        <span class="story-icon">🌊</span>
+        <div class="story-title">When Calm Became Contagious</div>
+        <div class="story-body">Stabilised a high-pressure environment during an incident near the DJ area. Lowered energy without a single guest noticing the intervention.</div>
+        <div class="story-result">Service rhythm restored in under 4 minutes.</div>
+      </div>
+      <div class="story-card">
+        <span class="story-icon">🤝</span>
+        <div class="story-title">A Team Reborn</div>
+        <div class="story-body">After-shift coaching for two new hires on timing and guest eye-contact. One week later — both leading their own sections independently.</div>
+        <div class="story-result">2 staff promoted to section leads within 30 days.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label">02</span>
+      <h2 class="section-title">Operational Strengths</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill"><div class="skill-dot"></div>Floor Leadership</div>
+      <div class="skill"><div class="skill-dot"></div>VIP Guest Handling</div>
+      <div class="skill"><div class="skill-dot"></div>Guest Recovery</div>
+      <div class="skill"><div class="skill-dot"></div>Upselling Strategy</div>
+      <div class="skill"><div class="skill-dot"></div>Team Training & Coaching</div>
+      <div class="skill"><div class="skill-dot"></div>FOH–BOH Coordination</div>
+      <div class="skill"><div class="skill-dot"></div>POS Systems</div>
+      <div class="skill"><div class="skill-dot"></div>Section Management</div>
+      <div class="skill"><div class="skill-dot"></div>Pre-Shift Briefings</div>
+      <div class="skill"><div class="skill-dot"></div>High-Volume Service</div>
+      <div class="skill"><div class="skill-dot"></div>Notion / Digital Systems</div>
+      <div class="skill"><div class="skill-dot"></div>Cross-Cultural Teams</div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATIONS ── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label">03</span>
+      <h2 class="section-title">Certifications</h2>
+    </div>
+    <div class="certs">
+      <div class="cert">
+        <span class="cert-icon">🏅</span>
+        <div>
+          <div class="cert-name">Waiter's Practical Certification</div>
+          <div class="cert-sub">Shvili Nakheel · Dubai · 2024</div>
+        </div>
+        <div class="cert-score">97%</div>
+      </div>
+      <div class="cert">
+        <span class="cert-icon">🍽️</span>
+        <div>
+          <div class="cert-name">Basic Food Safety Training</div>
+          <div class="cert-sub">2024</div>
+        </div>
+        <div class="cert-score">✓</div>
+      </div>
+      <div class="cert">
+        <span class="cert-icon">💻</span>
+        <div>
+          <div class="cert-name">Diploma in Computer Science</div>
+          <div class="cert-sub">Kampala International University · 2019</div>
+        </div>
+        <div class="cert-score">✓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RCA ── -->
+  <section class="section" id="rca">
+    <div class="section-header">
+      <span class="section-label">04</span>
+      <h2 class="section-title">Royal Connect Africa</h2>
+    </div>
+
+    <div class="rca-card">
+      <div>
+        <div class="rca-label">● Live Business · Founder</div>
+        <div class="rca-name">Royal Connect Africa</div>
+        <div class="rca-tagline">Tourism · Trade · Ebook · Partnerships — bridging Dubai and East Africa</div>
+
+        <div class="rca-pillars">
+          <span class="pillar">Tourism</span>
+          <span class="pillar">Export Trade</span>
+          <span class="pillar">Digital Products</span>
+          <span class="pillar">Partnerships</span>
+          <span class="pillar">Dubai–Uganda</span>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://aftrica.tours/" target="_blank" rel="noopener noreferrer">
+            🌍 aftrica.tours
+          </a>
+          <a class="btn btn-ghost" href="https://aftrica.tours/#contact" target="_blank" rel="noopener noreferrer">
+            ✉ Contact RCA
+          </a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/royal_connectafrica" target="_blank" rel="noopener noreferrer">
+            📸 Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BRAND & PRODUCTS ── -->
+  <section class="section" id="brand">
+    <div class="section-header">
+      <span class="section-label">05</span>
+      <h2 class="section-title">Kaizrug Brand</h2>
+    </div>
+
+    <div class="products">
+      <div class="product-card">
+        <span class="product-status live">Live</span>
+        <span class="product-icon">🗂️</span>
+        <div class="product-name">Template Studio</div>
+        <div class="product-desc">Notion templates for expats, hospitality pros, and founders. Personal OS, Command Center, Hospitality Pro Hub.</div>
+        <div style="margin-top:14px;">
+          <a class="btn btn-gold" href="https://kayzjoel.gumroad.com/l/tfaiv" target="_blank" rel="noopener noreferrer" style="font-size:9px;padding:8px 14px;">Shop Gumroad</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-status building">Building</span>
+        <span class="product-icon">🎨</span>
+        <div class="product-name">Canva University</div>
+        <div class="product-desc">Visual education platform for Canva design. Templates, courses, and toolkits for creators and entrepreneurs.</div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-status building">Building</span>
+        <span class="product-icon">💳</span>
+        <div class="product-name">Payments · Stripe</div>
+        <div class="product-desc">Stripe account registered and in verification. Will power direct payment flows for RCA packages and consulting.</div>
+        <!-- PLACEHOLDER: Replace button href with Stripe payment link once verification complete -->
+        <div style="margin-top:14px;">
+          <span class="btn btn-disabled" style="font-size:9px;padding:8px 14px;">Verifying →</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-status soon">Soon</span>
+        <span class="product-icon">📜</span>
+        <div class="product-name">The Kaizrug Codex</div>
+        <div class="product-desc">The governance document and philosophical foundation of the Kaizrug brand. Public manifesto site coming.</div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-status soon">Soon</span>
+        <span class="product-icon">🏨</span>
+        <div class="product-name">Hospitality Legacy</div>
+        <div class="product-desc">Platform and templates for hospitality professionals building their own brand and systems in the UAE and Africa.</div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-status soon">Soon</span>
+        <span class="product-icon">🤲</span>
+        <div class="product-name">The Invisible Hand</div>
+        <div class="product-desc">Strategic systems and consulting for founders who need the engine built behind the scenes. Define → deploy → scale.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="section" id="contact">
+    <div class="section-header">
+      <span class="section-label">06</span>
+      <h2 class="section-title">Contact</h2>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <h4>Direct Reach</h4>
+        <a class="contact-link" href="https://wa.me/971544392894" target="_blank" rel="noopener noreferrer">
+          <span>📱</span>
+          <div><span class="contact-label">WhatsApp</span>+971 54 439 2894</div>
+        </a>
+        <a class="contact-link" href="mailto:kayzjoel@gmail.com">
+          <span>✉️</span>
+          <div><span class="contact-label">Personal Email</span>kayzjoel@gmail.com</div>
+        </a>
+        <a class="contact-link" href="mailto:kaizrugwriter@gmail.com">
+          <span>📬</span>
+          <div><span class="contact-label">Brand / Business Email</span>kaizrugwriter@gmail.com</div>
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <h4>Professional Profiles</h4>
+        <a class="contact-link" href="https://www.linkedin.com/in/kaizire-joel-1b4100153" target="_blank" rel="noopener noreferrer">
+          <span>🔗</span>
+          <div><span class="contact-label">LinkedIn</span>kaizire-joel-1b4100153</div>
+        </a>
+        <a class="contact-link" href="https://www.instagram.com/royal_connectafrica" target="_blank" rel="noopener noreferrer">
+          <span>📸</span>
+          <div><span class="contact-label">Instagram · RCA</span>@royal_connectafrica</div>
+        </a>
+        <a class="contact-link" href="https://www.facebook.com/joel.kaizire" target="_blank" rel="noopener noreferrer">
+          <span>👤</span>
+          <div><span class="contact-label">Facebook</span>joel.kaizire</div>
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <h4>Business Channels</h4>
+        <a class="contact-link" href="https://aftrica.tours/" target="_blank" rel="noopener noreferrer">
+          <span>🌍</span>
+          <div><span class="contact-label">RCA Website</span>aftrica.tours</div>
+        </a>
+        <a class="contact-link" href="https://kayzjoel.gumroad.com/l/tfaiv" target="_blank" rel="noopener noreferrer">
+          <span>🛒</span>
+          <div><span class="contact-label">Template Store</span>kayzjoel.gumroad.com</div>
+        </a>
+        <!-- PLACEHOLDER: Add Stripe payment link when verification complete -->
+        <div class="contact-link" style="opacity:0.35;cursor:not-allowed;">
+          <span>💳</span>
+          <div><span class="contact-label">Stripe Payments</span>Verification in progress</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="footer-brand">⚔ Kaizrug</div>
+      <div class="footer-motto">Move Quiet · Build Loud · Leave Legacy</div>
+    </div>
+    <div class="footer-copy">
+      Joel Kaizire · Dubai, UAE<br>
+      © 2026 Kaizrug
+    </div>
+  </footer>
+
+</div>
+
+<!--
+  ═══════════════════════════════════════════════
+  KAIZRUG BRAND PALETTE — CANVA SWATCHES
+  Copy these hex codes into your Canva Brand Kit:
+  ═══════════════════════════════════════════════
+  Background Deep:    #07090f
+  Card Surface:       #0b0e1a
+  Gold (Primary):     #c9a84c  ← Use for headers, logos
+  Gold Light:         #e8c97a  ← Use for highlights
+  Emerald (Active):   #00c87a  ← Use for success, Africa
+  Cream (Text):       #ece8df  ← Primary text
+  Muted (Text):       #7a85a8  ← Secondary text
+  Border:             #1c2038  ← Dividers
+  Amber (Energy):     #f5a623  ← Warnings, urgency
+  ═══════════════════════════════════════════════
+-->
+
+</body>
+</html>
