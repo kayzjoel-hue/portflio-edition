@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joel Kaizire — Projects</title>
+  <meta name="description" content="Projects and work highlights for Joel Kaizire." />
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --sidebar: #f8f9fa;
+      --text: #1a1a1a;
+      --muted: #555555;
+      --accent-maroon: #681818;
+      --accent-emerald: #00874e;
+      --gold: #b08d1a;
+      --border: #e0e0e0;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .cv-page {
+      max-width: 900px;
+      margin: 40px auto;
+      background: var(--bg);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: 1100px;
+    }
+
+    @media (max-width: 850px) {
+      .cv-page { grid-template-columns: 1fr; margin: 0; }
+    }
+
+    .sidebar {
+      background-color: var(--sidebar);
+      border-right: 1px solid var(--border);
+      padding: 40px 30px;
+    }
+
+    .profile-photo {
+      width: 200px;
+      height: 240px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      display: block;
+      margin-bottom: 16px;
+      background: #eee;
+    }
+
+    .sidebar h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-maroon);
+      margin-top: 26px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    .contact-list { list-style: none; padding: 0; font-size: 13px; }
+    .contact-list li { margin-bottom: 10px; word-break: break-word; }
+    .contact-list b { display: block; color: var(--muted); font-size: 11px; margin-bottom: 2px; }
+    .contact-list a { color: var(--accent-emerald); text-decoration: none; }
+    .contact-list a:hover { text-decoration: underline; }
+
+    .skills-grid { margin-top: 14px; }
+    .skill-tag {
+      display: inline-block;
+      background: #eee;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      margin: 0 6px 8px 0;
+    }
+
+    .main-content { padding: 40px; }
+
+    header { border-bottom: 4px solid var(--accent-maroon); padding-bottom: 20px; margin-bottom: 26px; }
+    header h1 { margin: 0; font-size: 32px; letter-spacing: -1px; }
+    header p { margin: 6px 0 0 0; color: var(--accent-emerald); font-weight: 700; text-transform: uppercase; font-size: 14px; }
+
+    section { margin-bottom: 26px; }
+    h3 {
+      font-size: 18px;
+      color: var(--accent-maroon);
+      border-bottom: 1px solid #eee;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .story {
+      margin-bottom: 14px;
+      padding: 14px;
+      background: #fafafa;
+      border-radius: 10px;
+      border: 1px solid #eee;
+    }
+    .story-title { font-weight: bold; color: var(--accent-emerald); font-size: 14px; margin-bottom: 6px; }
+    .story-desc { font-size: 14px; color: var(--muted); }
+
+    .quick-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid #ddd;
+      background: #fff;
+      color: #111;
+    }
+    .btn:hover { border-color: var(--accent-emerald); }
+    .btn.primary { background: var(--accent-emerald); color: #fff; border-color: var(--accent-emerald); }
+    .btn.gold { background: #fff7df; border-color: #f0d889; }
+
+    footer {
+      grid-column: span 2;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 18px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cv-page">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <img class="profile-photo" src="profile.jpg" alt="Joel Kaizire" />
+
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><b>Location</b>Dubai, United Arab Emirates</li>
+        <li><b>Phone / WhatsApp</b><a href="https://wa.me/971544392894" target="_blank" rel="noopener noreferrer">+971 54 439 2894</a></li>
+        <li><b>LinkedIn</b><a href="https://www.linkedin.com/in/kaizire-joel-1b4100153" target="_blank" rel="noopener noreferrer">linkedin.com/in/kaizire-joel-1b4100153</a></li>
+        <li><b>Email</b><a href="mailto:kayzjoel@gmail.com">kayzjoel@gmail.com</a></li>
+      </ul>
+
+      <h2>Quick Links</h2>
+      <div class="quick-links">
+        <a class="btn gold" href="joel_kaizire_cv.pdf" download>Download CV (PDF)</a>
+        <a class="btn primary" href="https://wa.me/971544392894" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn" href="https://www.linkedin.com/in/kaizire-joel-1b4100153" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+        <!-- LOOP BACK TO HOME -->
+        <a class="btn" href="/">Back to CV</a>
+      </div>
+
+      <h2>Core Skills</h2>
+      <div class="skills-grid">
+        <span class="skill-tag">Guest Recovery</span>
+        <span class="skill-tag">Floor Coordination</span>
+        <span class="skill-tag">Upselling Strategy</span>
+        <span class="skill-tag">Team Training</span>
+        <span class="skill-tag">FOH–BOH Coordination</span>
+        <span class="skill-tag">POS Systems</span>
+        <span class="skill-tag">VIP Service</span>
+      </div>
+
+      <div style="margin-top:22px;">
+        <span style="font-size:12px;color:var(--muted);">Immediate joiner • Visa sponsorship required</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <header>
+        <h1>Projects</h1>
+        <p>Selected work and initiatives</p>
+      </header>
+
+      <section>
+        <h3>Royal Connect Africa (RCA)</h3>
+        <div class="story">
+          <div class="story-title">RCA Website</div>
+          <div class="story-desc">
+            Tourism and coordination between UAE and Africa. Website:
+            <a href="https://aftrica.tours/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-emerald);font-weight:700;text-decoration:none;">aftrica.tours</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Hospitality Operations</h3>
+        <div class="story">
+          <div class="story-title">Floor Leadership & Service Standards</div>
+          <div class="story-desc">
+            Guest recovery, team coaching, upselling, and FOH–BOH coordination during peak service.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Proof / Links</h3>
+        <div class="quick-links">
+          <a class="btn" href="https://aftrica.tours/" target="_blank" rel="noopener noreferrer">RCA Website</a>
+          <a class="btn" href="mailto:kayzjoel@gmail.com">Email</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      JOEL KAIZIRE — MOVE QUIET. BUILD LOUD. LEAVE LEGACY.
+    </footer>
+  </div>
+</body>
+</html>
